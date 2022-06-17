@@ -1,0 +1,104 @@
+:root{
+   --bright-orange : hsl(31, 77%, 52%);
+   --dark-cyan : hsl(184, 100%, 22%);
+   --very-dark-cyan : hsl(179, 100%, 13%);
+   --transparent-white :  hsla(0, 0%, 100%, 0.75);
+   --very-light-grey : hsl(0, 0%, 95%);
+   --font-size : 13px;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background-color: var(--very-light-grey);
+   font-family: "Lexend Deca";
+}
+.container{
+   max-width: 800px;
+   max-height: 700px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+}
+.column{
+   padding: 30px 50px 30px 30px;
+   width: 300px;
+  
+}
+.icon{
+   margin: 20px 0px
+}
+.column h1{
+   font-family: "Big Shoulders Display", sans-serif;
+   color: var(--very-light-grey);
+   margin-bottom: 25px;
+}
+.column p{
+   font-size: var(--font-size);
+   color: var(--transparent-white);
+   margin-bottom: 100px;
+}
+.container__sedan{
+   background-color: var(--bright-orange);
+   border-radius: 20px 0 0 20px;
+}
+.container__suv{
+   background-color: var(--dark-cyan);
+}
+.container__luxury{
+   background-color: var(--very-dark-cyan);
+   border-radius: 0 20px 20px 0;
+}
+.button{
+   border: none;
+   padding: 13px 30px;
+   border-radius: 30px;
+   font-family: "Lexend Deca", sans-serif;
+   transition: 0.2s;
+}
+#sedan{
+   color: var(--bright-orange);
+}
+#sedan:hover{
+   cursor: pointer;
+   color: #fff;
+   background-color: var(--bright-orange);
+   border: 1px solid #fff;
+}
+#suv{
+   color: var(--dark-cyan);
+}
+#suv:hover{
+   cursor: pointer;
+   color: #fff;
+   background-color: var(--dark-cyan);
+   border: 1px solid #fff;
+}
+#luxury{
+   color: var(--very-dark-cyan);
+}
+#luxury:hover{
+   cursor: pointer;
+   color: #fff;
+   background-color: var(--very-dark-cyan);
+   border: 1px solid #fff;
+}
+@media screen and (max-width:810px) {
+   .container{
+      flex-direction: column;
+      margin-bottom: 10px;
+   }
+   .container__sedan{
+      border-radius: 20px 20px 0 0;
+   }
+   .container__luxury{
+      border-radius: 0 0 20px 20px;
+   }
+   .column p{
+      margin-bottom: 20px;
+   }
+}
